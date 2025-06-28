@@ -87,19 +87,3 @@ python main.py
 `*Can be parsed, analyzed, or visualized later*`
 
 `*Each message includes: round, role, content, topic*`
-
-## 🗺️ Debate Flow Diagram (LangGraph)
-
-```mermaid
-flowchart TD
-    Start([Start]) --> A[👨‍🔬 Agent A (Scientist)]
-    A --> M1[[🧠 Update Memory]]
-    M1 --> Cond{🔁 Round Check}
-    
-    Cond -- Round < 8 --> B[💭 Agent B (Philosopher)]
-    B --> M2[[🧠 Update Memory]]
-    M2 --> Cond
-
-    Cond -- Round ≥ 8 --> J[⚖️ Judge]
-    J --> End([End])
-```
